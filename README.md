@@ -1,5 +1,12 @@
 # World of Trucks Progress Display
 
+## Patch notes
+
+**2026-02-13**
+- Logo is now larger and more visible
+- Event name is dynamically read from a hidden div and displayed as the main title
+
+
 This project provides a simple web-based progress display for the "Hearts in Bloom" community event from World of Trucks. It consists of a Python backend (FastAPI) and a frontend HTML page designed to be 100% compatible with NZXT Kraken display devices.
 
 ## Features

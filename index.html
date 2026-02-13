@@ -33,9 +33,9 @@
       margin-bottom: 10px;
     }
     .logo img {
-      max-width: 180px;
+      max-width: 240px;
       height: auto;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     h1 {
@@ -83,7 +83,9 @@
       <img src="wotr_logo.jpg" alt="World of Trucks logo">
     </div>
 
-    <h1>Hearts in Bloom – Community Progress</h1>
+
+    <div class="global-event-title" style="display:none;">Hearts in Bloom Progress</div>
+    <h1 id="event-title"></h1>
 
     <div id="progress-container">
       <div id="progress-bar"></div>
@@ -98,6 +100,14 @@
   </div>
 
   <script>
+    // Set event title from .global-event-title
+    (function() {
+      var eventDiv = document.querySelector('.global-event-title');
+      var h1 = document.getElementById('event-title');
+      if (eventDiv && h1) {
+        h1.textContent = eventDiv.textContent;
+      }
+    })();
     const API_URL = "http://localhost:8000/progress";
     const REFRESH_MS = 15000;
 
